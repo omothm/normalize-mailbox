@@ -20,7 +20,7 @@ import { findRuleSetByMx, splitEmailAddress } from './util';
  * @returns                   The normalized email address, or the same email address if any
  *                            normalization step failed or rule set was not found.
  */
-export async function normalize(address: string, optionalRuleSetName?: RuleSetName)
+export default async function normalize(address: string, optionalRuleSetName?: RuleSetName)
   : Promise<string> {
   let splitAddress;
   try {

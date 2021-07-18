@@ -1,5 +1,5 @@
 import assert from 'assert';
-import { normalize } from '../src/index';
+import normalize from '../src/index';
 
 describe('Outlook', () => {
   it('should not remove dots', async () => {
