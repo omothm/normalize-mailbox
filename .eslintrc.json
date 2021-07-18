@@ -1,0 +1,35 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "project": "tsconfig.eslint.json",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "error",
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      { "multiline": { "delimiter": "semi", "requireLast": true } }
+    ],
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "comma-dangle": ["error", "always-multiline"],
+    "eol-last": ["warn"],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "linebreak-style": ["error", "unix"],
+    "max-len": ["warn", 100],
+    "no-trailing-spaces": ["warn"],
+    "quote-props": ["error", "consistent-as-needed"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"]
+  }
+}
